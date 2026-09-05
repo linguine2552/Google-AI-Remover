@@ -1,4 +1,4 @@
-# Google AI Remover
+# <img src="icon.png" width="32" alt="" align="top" /> Google AI Remover
 
 A browser extension (Firefox and Chrome, Manifest V3) that stops Google AI
 Overviews **before they are generated** -- not just hidden! The goal is model
@@ -56,15 +56,15 @@ should be plain web results.
 
 ## Limitations and trade-offs
 
->> `udm=14` is an **undocumented** parameter (available since May 2024, still
+- `udm=14` is an **undocumented** parameter (available since May 2024, still
 working as of 2026). Google could remove it -- layers 2–3 remain as backstops.
->> The Web results mode also drops some non-AI SERP features (shopping units,
+- The Web results mode also drops some non-AI SERP features (shopping units,
 some inline widgets). Knowledge panels and the tab strip remain.
->> Layer 3's text matching is English-only.
->> Host permissions cover `*.google.com` country-code domains (google.co.uk
+- Layer 3's text matching is English-only.
+- Host permissions cover `*.google.com` country-code domains (google.co.uk
 etc.) already redirect to google.com for search, but if you use one directly the
 redirect rule matches them -- only Chrome's redirect action may lack host
 permission there. Add the TLD to `host_permissions` if needed.
->> Google's endpoints and markup change frequently. If overviews reappear, check
+- Google's endpoints and markup change frequently. If overviews reappear, check
 whether `folsrch` has been renamed (DevTools → Network on an unfiltered search)
 and update `rules.json`.
