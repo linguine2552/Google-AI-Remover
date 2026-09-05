@@ -1,0 +1,4 @@
+div[data-async-type="folsrch"],
+div[data-aim] {
+  display: none !important;
+}
